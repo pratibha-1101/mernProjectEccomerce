@@ -1,0 +1,204 @@
+make two folders :frontend and backend
+
+backend
+_______
+do "npm init"
+make folder: "app.js" , "server.js" and install "express","mongoose", "nodemon" and "dotenv"
+assign PORTnumber in dotenv and make listening port in server.js where the whole backend runs.
+
+then, make folders in backened folder like controllers,routes where we put all the routes of APIs.
+
+---introducing some error handlers also, like---
+1. uncaughtException
+2. unhandledRejection
+3. Try-Catch Errors
+4. status code errors
+* and getting whole details of a single product .
+
+
+
+--installing pakages for authentications in backend---
+ bcryptjs ---- to incrypt the password
+ jsonwebtoken --- to generate the valid token
+ validator --- to check whether ridht details are there at right places
+ nodemailer --- for sending mails automatically when OTP needed or need any help.
+ cookie-parser --- token stores in cookies form
+ body-parser 
+
+
+ --installing  
+  "npm i express-fileupload cloudinary"  for using cloudinary
+
+
+
+---making backend APIs---
+
+1.PRODUCT APIs      ---at productcontroller.js
+______________
+* for creating product
+* for updating product
+* for deleting product
+* for getting all products with
+  1.sorting
+  2.searching (by reading the keywords)
+  3.filtering (price and other categories)
+  4.pagination (for allowing set number of products in asingle page)
+
+
+2.ORDER APIs      ---at ordercontroller.js
+______________
+* for creating order
+* for updating order
+* for deleting order
+* get all orders
+* and getting whole details of a single order 
+
+
+3.USER APIs      ---at usercontroller.js
+______________
+* creating admin by roll
+* for creating user
+* for updating user
+* for deleting user
+* get all users
+* and getting whole details of a single user .
+
+1.PAYMENT APIs      ---at paymentcontroller.js
+______________
+here! all paymrnt are doing by stripe method
+
+
+creating seperate API's of all of them and route them folder by folder in the 'routes.js' folder
+* order route
+* payment route
+* user route
+* product route
+
+
+and link them to 'app.js' by importing all routers there.
+
+and lastly importing 'app.js' to 'server.js' where backened are running at port number:4000 
+
+
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+FRONTENED
+______________
+
+
+ redux-devtools-extension
+ _________________________
+
+* installing redux-devtools-extension for chrome 
+for watching live updates of store having 
+initial values as well as more updated values in console.
+
+* and as well as "npm i  redux-devtools-extension" library also.
+for importing it in 'store.js'
+
+
+
+proxy
+_____
+* to connect backend from frontend i use 
+  the object 'proxy' in 'frontend's package.json' which is "https://localhost:4000" where '4000' is the backend port.
+
+
+useselector
+___________
+* to get the data from 'store' to the react's components.
+* by importing "useselector" from "react redux".
+
+
+react-alert
+___________
+* installing react -alert from "npm i react-alert --legacy-peer-deps"
+otherwise i found the errors, and
+* npm i react-alert-template-basic --legacy-peer-deps
+* because of the "react-alert" i am able to install "react-material-ui-carousel"
+* so i forcly install this with "npm install react-material-ui-carousel --save --legacy-peer-deps" and it works
+* as well as 
+npm install @mui/material --save --legacy-peer-deps
+npm install @mui/icons-material --save --legacy-peer-deps
+npm install @mui/styles --save --legacy-peer-deps
+
+
+different product cards?
+_______________________
+* to get the perticular product details i use 
+   (link to='') method
+in which i link the products with their ids 
+
+
+
+In whole project i use " react-@mui/material" many times, like:
+                      ___________________________
+1. Icons like ----youtube,insta, face,edit,account,user, tree ,etc......
+2. Rating
+3. Carousel
+4. Slider
+5. cors like ---Typography,button, data-grid, etc
+
+
+
+
+for pagination
+_____________
+* npm i react-js-pagination --save --legacy-peer-deps
+
+
+to import all the filters
+* firstly map the values
+* then make their useStates
+* then, call all filters in useEffect hook
+* and, dispatch them as well
+* and, put all the filtered values "in get all products url API" at productAction page.
+
+
+useAlert ----use with diapatch & useEffect
+_________
+* to disply the errors in proper manner i use...."useAlert"  and "useDispatch" importing from "rect-alert" and "react-redux"library.
+* firstly, write "const alert = useAlert();" and "const dispatch = useDispatch();"
+* nd then, with the help of useEffect call function
+   useEffect(() => 
+    {if (error) {
+      alert.error(error);
+      dispatch(clearErrors());
+    }}); here, "clearErrors" is assigned in ACTION's page.
+
+
+for using redux
+_________________
+making folders like ----store, reducer , actions, contants.
+making all the action type values in seperate folder(constants) for my convineince.
+importing all the 'reducers' in 'store's folder' where 'combined reducer' is available....also import constants.
+importing all the constants in 'action folder' and placing all the backened url's with their perticular functions in it. with the help of 'axios'.
+
+
+making different-different 'js' files with their 'css' attached files
+and link them to app.js(root file of frontend).
+also import them at top.
+
+
+
+my all the product's images are uploading in cloudnary files, for saving my spaces.
+
+and atlast.....post my ''Eccomerce project'' at netlify.
+
+
+
+                                                            
+                                                            
+                                                            
+                                                         -----------------------
+                                                              THANK YOU!!!!!
+                                                         -----------------------
+
+
+
+
+
+    
